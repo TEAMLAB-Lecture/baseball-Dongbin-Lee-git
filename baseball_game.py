@@ -261,7 +261,8 @@ def main():
     print("Random Number is : ", random_number)
     # ===Modify codes below=============
     # 위의 코드를 포함하여 자유로운 수정이 가능함
-    while True:
+    break_flag = False
+    while break_flag == False:
         guess_num = input("Input guess number : ")
         if is_validated_number(guess_num):
             st_ball = get_strikes_or_ball(guess_num, random_number)
@@ -274,8 +275,8 @@ def main():
                         print("Random Number is : ", random_number)
                         break
                     elif is_no(check):
-                        print("Thank you for using this program\nEnd of the Game")
-                        exit()
+                        break_flag = True
+                        break
                     else:
                         print("Wrong Input, Input again")
         else:
