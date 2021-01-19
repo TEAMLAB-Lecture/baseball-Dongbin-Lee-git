@@ -264,7 +264,7 @@ def main():
     break_flag = False
     while break_flag == False:
         user_input = input("Input guess number : ")
-        if user_input == 0:
+        if user_input == '0':
             break
         if is_validated_number(user_input):
             st_ball = get_strikes_or_ball(user_input, random_number)
