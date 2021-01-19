@@ -263,18 +263,18 @@ def main():
     # 위의 코드를 포함하여 자유로운 수정이 가능함
     break_flag = False
     while break_flag == False:
-        guess_num = input("Input guess number : ")
-        if is_validated_number(guess_num):
-            st_ball = get_strikes_or_ball(guess_num, random_number)
+        user_input = input("Input guess number : ")
+        if is_validated_number(user_input):
+            st_ball = get_strikes_or_ball(user_input, random_number)
             print("Strikes : ", st_ball[0], " , Balls : " , st_ball[1])
             if st_ball[0] == 3:
                 while True:
-                    check = input("You win, one more(Y/N) ? ")
-                    if is_yes(check):
+                    user_input = input("You win, one more(Y/N) ? ")
+                    if is_yes(user_input):
                         random_number = str(get_not_duplicated_three_digit_number())
                         print("Random Number is : ", random_number)
                         break
-                    elif is_no(check):
+                    elif is_no(user_input):
                         break_flag = True
                         break
                     else:
