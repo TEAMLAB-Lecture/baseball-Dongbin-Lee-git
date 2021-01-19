@@ -274,7 +274,7 @@ def main():
                         print("Random Number is : ", random_number)
                         break
                     elif is_no(check):
-                        print("End of the Game")
+                        print("Thank you for using this program\nEnd of the Game")
                         exit()
                     else:
                         print("Wrong Input, Input again")
